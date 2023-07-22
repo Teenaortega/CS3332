@@ -1,45 +1,64 @@
 package com.cs3332.fooddelivery.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
 @Document(collection = "restaurants")
-public class restaurant {
+public class restaurant extends user {
     @Id
-    private String id;
-    private String name;
+    private String restaurantId;
+    private String restaurantname;
     private String address;
-    private String phoneNumber;
- 
+    private String restaurantphoneNumber;
+    private List<MenuItem> menu;
+
+   
 	// Getters
-    public String getId() {
-        return id;
+    public String getrestaurantId() {
+        return restaurantId;
     }
 
-    public String getName() {
-        return name;
+    public String getrestaurantName() {
+        return restaurantname;
     }
-    public String setName(String newName) {
-        this.name = newName;
-        return name;
-    }
+
     public String getAddress() {
         return address;
     }
+    
+    public String getrestaurantPhoneNumber() {
+        return restaurantphoneNumber;
+    }
+    public List<MenuItem> getMenu() {
+        return menu;
+    }
+    
 
 	// Setters
 
+    public String setrestaurantId(String newid) {
+        this.restaurantId = newid;
+        return restaurantId;
+    }
+    public String serestauranttName(String newName) {
+        this.restaurantname = newName;
+        return restaurantname;
+}
     public String setAddress(String newAddress) {
         this.address = newAddress;
         return address;
     }
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
 
-    public String setPhoneNumber(String newPhoneNumber) {
-        this.phoneNumber = newPhoneNumber;
-        return phoneNumber;
-    }
 
+    public String setrestaurantPhoneNumber(String newPhoneNumber) {
+        this.restaurantphoneNumber = newPhoneNumber;
+        return restaurantphoneNumber;
+    }
+    public void setMenu(List<MenuItem> menu) {
+        this.menu = menu;
+    }
+    
 }

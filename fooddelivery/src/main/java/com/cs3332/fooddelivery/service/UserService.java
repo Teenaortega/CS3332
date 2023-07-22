@@ -28,7 +28,6 @@ public class UserService {
     }
 
     public user updateUser(String id, user user) {
-        // Ensure the user to update exists
         if (!userRepository.existsById(id)) {
             throw new RuntimeException("User not found");
         }
@@ -38,7 +37,6 @@ public class UserService {
     }
 
     public void deleteUser(String id) {
-        // Ensure the user to delete exists
         if (!userRepository.existsById(id)) {
             throw new RuntimeException("User not found");
         }
