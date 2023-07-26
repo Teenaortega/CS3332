@@ -25,7 +25,7 @@ public class restaurant extends user {
         return restaurantname;
     }
 
-    public String getAddress() {
+    public String getrestaurantAddress() {
         return address;
     }
     
@@ -43,11 +43,11 @@ public class restaurant extends user {
         this.restaurantId = newid;
         return restaurantId;
     }
-    public String serestauranttName(String newName) {
+    public String setrestaurantName(String newName) {
         this.restaurantname = newName;
         return restaurantname;
 }
-    public String setAddress(String newAddress) {
+    public String setrestaurantAddress(String newAddress) {
         this.address = newAddress;
         return address;
     }

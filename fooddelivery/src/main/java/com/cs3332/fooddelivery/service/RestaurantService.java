@@ -42,8 +42,8 @@ public class RestaurantService {
         restaurant restaurant = restaurantRepository.findById(restaurantId)
             .orElseThrow(() -> new RuntimeException("Restaurant not found"));
 
-        restaurant.serestauranttName(newName);
-        restaurant.setAddress(newAddress);
+        restaurant.setrestaurantName(newName);
+        restaurant.setrestaurantAddress(newAddress);
         restaurant.setrestaurantPhoneNumber(newPhoneNumber);
         return restaurantRepository.save(restaurant);
     }
